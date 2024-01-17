@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*
+{
+    font-family: 'Poppins', sans-serif;
+}
+
+.title{
+font-family: 'Poppins', sans-serif;
+margin-top: 0%;
+font-size: 50px;
+color: #cd8900;
+font-weight: 700;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+
+
+.food-category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.food-card {
+    flex: 1;
+    max-width: 300px;
+    margin: 20px;
+    margin-top: 1%;
+    padding: 10px;
+    text-align: center;
+    background:#cd8900;
+  
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+   
+}
+
+.food-card img {
+    max-width: 100%;
+    border-width: 15px;
+    border-color: white;
+    border-radius: 10px;
+}
+
+
+.food-card h3 {
+    margin: 10px 0;
+}
+button {
+    border-color: transparent;
+    background-color: transparent;
+}
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Styles for the popup boxes */
+.popup-box {
+    background-color:#ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    width:70%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: relative;
+    color:Black;
+}
+
+/* Styles for the close button */
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+h1 {
+    margin: 0;
+}
+header {
+    background-color: #2b2b2e;
+    color:#cd8900;
+    text-align: center;
+    padding: 20px;
+}
+body{
+    background-color: #2b2b2e;
+    margin:0;
+    overflow-x: hidden;
+}
+.button{
+    background-color:rgb(248, 255, 248);
+    color:#121211;
+}
+.cart-container {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Hide the cart by default */
+    width: 300px;
+    height: 100%;
+    background-color:#cd8900;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transition: right 0.3s;
+}
+
+/* Style for the cart button icon */
+.cart-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2; /* Ensure it's above the cart */
+}
+
+/*cart img*/
+.cart-button img{
+    margin-top: 40%;
+    height: 2cm;
+    width: 2cm;
+    
+    
+}
+
+/*cart slider name*/
+.slide-name{
+    text-align: center;
+    font-size: 20px;
+    margin-right: 2cm;
+}
+
+/* Style for the closing button */
+.close-button {
+    text-align: right;
+    padding: 20px;
+    cursor: pointer;
+    padding-top: 1px;
+    margin-top: 0;
+}
+.remove-button {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+
+/*Navigation bar*/
+.Navigation
+{ 
+    position:relative;
+    
+    padding-right: 0.9cm;
+    width: 350px;
+    height: 70px;
+    background: rgb(250, 251, 252);
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    margin:auto;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.Navigation ul
+{
+
+    display: flex;
+    width: 350px;
+}
+
+.Navigation ul li
+{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.Navigation ul li a
+
+{
+    position: relative;
+    justify-content: center;
+    display:flex ;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+}
+
+.Navigation ul li a .icon
+{
+    position:relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.80em;
+    transition: 0.5s;
+    color:#cd8900;
+}
+
+.Navigation ul li:hover a .icon
+{
+    transform:translateY(-60px);
+}
+
+.Navigation ul li a .text
+{
+    position: absolute;
+    color: #cd8900;
+    font-weight: 400;
+    font-size: 0.90em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(14px);
+}
+
+.Navigation ul li:hover a .text
+{
+    opacity: 1;
+    transform:translateY(1px);
+}

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/static/assets/bmi_new_img.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.calculator h1{
+    font-size: 36px;
+    text-align: center;
+    padding: 5px;
+}
+
+
+::placeholder {
+    color: white;
+    opacity: 1; 
+  }
+  
+  ::-ms-input-placeholder { 
+    color: white;
+  }
+
+.calculator {
+    align-items:center;
+    width: 420px;
+    height: 530px;
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(6, 1, 1, 0.577);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    padding: 15px 30px;
+    margin-top: 25%;
+    
+}
+
+.remember{
+    display: flex;
+    justify-content: stretch;
+    font-size: 18px;
+    margin: 20px 0 25px;
+    padding: 5px;
+}
+
+label, input {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+   
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(6, 1, 1, 0.577);
+    border-radius: 40px;
+    font-size: 18px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    position:relative;
+    background: orangered;
+    border: 2px solid rgba(6, 1, 1, 0.577);
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    margin: 10px 0 20px;
+}
+
+button:hover {
+    background-color: #ee1010e0;
+}
+
+#result {
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content:center;
+    font-weight: 800;
+}
+
+
+
+/*navigation bar adddition*/
+.Navigation
+{ 
+    position:relative;
+    padding-left: 0.5cm;
+    padding-right: 0.5cm;
+    width: 390px;
+    height: 70px;
+    background: rgb(250, 251, 252);
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    margin:auto;
+    margin-top: 25%;
+    margin-bottom: 1%;
+}
+
+.Navigation ul
+{
+
+    display: flex;
+    width: 350px;
+    align-items: center;
+    justify-content: center;
+    margin-top:11%;
+}
+
+.Navigation ul li
+{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.Navigation ul li a
+
+{
+    position: relative;
+    justify-content: center;
+    display:flex ;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+}
+
+.Navigation ul li a .icon
+{   
+    position:relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.80em;
+    transition: 0.5s;
+    color: #cd8900;
+}
+
+.Navigation ul li:hover a .icon
+{
+    transform:translateY(-60px);
+    color: #cd8900;
+    font-size: 2.2em;
+}
+
+.Navigation ul li a .text
+{
+    position: absolute;
+    color: #cd8900;
+    font-weight: 400;
+    font-size: 0.90em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(14px);
+}
+
+.Navigation ul li:hover a .text
+{
+    opacity: 1;
+    transform:translateY(1px);
+}

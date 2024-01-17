@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/Calories.css">
+    <title>Calories Required Calculator</title>
+</head>
+<body>
+    <div>
+    <div class="calculator">
+        <h1>Calories Calculator</h1>
+        <form id="calories-form">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height" required>
+            <br>
+            <br>
+
+            <button type="button" id="calculate">Calculate</button>
+        </form>
+        <div id="result"></div>
+    </div>
+<br>
+<br>
+
+    <!--navigation bar-->
+    <div class="Navigation">
+        <ul>
+            <li class="active">
+                <a href="NavBar.css">
+                    <a href="/">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="text">HOME</span>
+                    </a>
+                </a>
+              </li>
+            <li class="active">
+                <a href="NavBar.css">
+                    <a href="/Bmi_new">
+                    <span class="icon"><ion-icon name="body-outline"></ion-icon></span>
+                    <span class="text">BMI VALUE</span>
+                    </a>
+                </a>
+            <li class="active">
+                <a href="NavBar.css">
+                    <a href="/Calories">
+                    <span class="icon"><ion-icon name="pizza-outline"></ion-icon></span>
+                    <span class="text">CALORIES</span>
+                    </a>
+                </a>
+            </li>
+            </li>
+            <li class="active">
+                <a href="NavBar.css">
+                    <a href="/Food">
+                    <span class="icon"><ion-icon name="heart-outline"></ion-icon></span>
+                    <span class="text">HEALTH</span>
+                    </a>
+                </a>
+            </li>
+        
+            <li class="active">
+                <a href="NavBar.css">
+                    <a href="http://localhost:8501/Custom_Food_Recommendation">
+                    <span class="icon"><ion-icon name="fast-food-outline"></ion-icon></span>
+                    <span class="text">RECIPE MAKER</span>
+                    </a>
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="NavBar.css">
+                    <a href="/about">
+                    <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+                    <span class="text">ABOUT US</span>
+                    </a>
+                </a>
+            </li>
+  
+            
+            
+        </ul>
+    </div>
+   
+    <script>
+  
+        const list = document.querySelectorAll('.list');
+        
+        function activeLink(){
+        
+        list.forEach((item)=>
+        
+        item.classList.remove('active'));
+        
+        this.classList.add('active');
+        
+        }
+        
+        list.forEach((item)=>
+        
+        item.addEventListener('click',));
+    </script>
+  
+      <!--installing icons-->
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      
+    
+    </div> 
+
+</div>
+    <script src="/static/js/Calories.js"></script>
+</body>
+</html>

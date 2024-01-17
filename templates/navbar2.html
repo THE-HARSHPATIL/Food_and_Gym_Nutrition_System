@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>navbar2</title>
+    <link rel="stylesheet" href="/static/css/navbar2.css" />
+  
+  </head>
+  <body>
+    <div class="container">
+      <div class="carousel">
+        <div class="carousel__face"><span></span></div>
+        <div class="carousel__face"><span></span></div>
+        <div class="carousel__face"><span></span></div>
+        <div class="carousel__face"><span></span></div>
+        <div class="carousel__face"><span></span></div>
+        <div class="carousel__face"><span></span></div>
+        <div class="carousel__face"><span></span></div>
+      </div>
+    </div>
+    <br>
+
+    <div class=" mixed">
+      <div class="title">
+          <p><font style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Gym&nbsp Nutrition&nbsp System</font></p>
+      </div>
+<div class="Navigation">
+    <div class="Navigation">
+      <ul>
+
+        <li class="active">
+          <a href="NavBar.css">
+              <a href="/">
+              <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+              <span class="text">HOME</span>
+              </a>
+          </a>
+        </li>
+          <li class="active">
+              <a href="NavBar.css">
+                  <a href="/Bmi_new">
+                  <span class="icon"><ion-icon name="body-outline"></ion-icon></span>
+                  <span class="text">BMI VALUE</span>
+                  </a>
+              </a>
+            </li>
+          <li class="active">
+              <a href="NavBar.css">
+                  <a href="/Calories">
+                  <span class="icon"><ion-icon name="pizza-outline"></ion-icon></span>
+                  <span class="text">CALORIES</span>
+                  </a>
+              </a>
+         
+          </li>
+          <li class="active">
+              <a href="NavBar.css">
+                  <a href="/Food">
+                  <span class="icon"><ion-icon name="heart-outline"></ion-icon></span>
+                  <span class="text">HEALTH</span>
+                  </a>
+              </a>
+          </li>
+      
+          <li class="active">
+              <a href="NavBar.css">
+                  <a href="http://localhost:8501/Custom_Food_Recommendation">
+                  <span class="icon"><ion-icon name="fast-food-outline"></ion-icon></span>
+                  <span class="text">RECIPE MAKER</span>
+                  </a>
+              </a>
+          </li>
+
+          <li class="active">
+            <a href="NavBar.css">
+                <a href="/about">
+                <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+                <span class="text">ABOUT US</span>
+                </a>
+            </a>
+        </li>
+          
+      </ul>
+  </div>
+</div>
+  <script>
+
+      const list = document.querySelectorAll('.list');
+      
+      function activeLink(){
+      
+      list.forEach((item)=>
+      
+      item.classList.remove('active'));
+      
+      this.classList.add('active');
+      
+      }
+      
+      list.forEach((item)=>
+      
+      item.addEventListener('click',));
+  </script>
+
+  <!--installing icons-->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  </body>
+</html>

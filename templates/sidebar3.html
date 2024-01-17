@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+    <style>
+        /* Style for the sidebar cart */
+        .cart-container {
+            position: fixed;
+            top: 0;
+            right: -300px; /* Hide the cart by default */
+            width: 300px;
+            height: 100%;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+            transition: right 0.3s;
+        }
+
+        /* Style for the cart button icon */
+        .cart-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 2; /* Ensure it's above the cart */
+        }
+
+        /* Style for the closing button */
+        .close-button {
+            text-align: right;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Style for the product catalog */
+        .product {
+            margin: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        /* Style for the remove button */
+        .remove-button {
+            color: red;
+            cursor: pointer;
+        }
+
+        /* Style to prevent horizontal scrolling */
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Catalog</h1>
+    <div class="product">
+        <h2>Product 1</h2>
+        <p>Price: $10.00</p>
+        <button onclick="addToCart('Product 1', 10.00)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <h2>Product 2</h2>
+        <p>Price: $15.00</p>
+        <button onclick="addToCart('Product 2', 15.00)">Add to Cart</button>
+    </div>
+
+    <div class="cart-button" onclick="openCart()">
+        <img src="cart-icon.png" alt="Cart">
+    </div>
+
+    <div class="cart-container" id="cart-container">
+        <div class="close-button" onclick="closeCart()">Close</div>
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+    </div>
+
+    <script>
+        let cartIsOpen = false;
+        const cartContainer = document.getElementById("cart-container");
+        const cartButton = document.querySelector(".cart-button");
+
+        // Function to open the cart sidebar
+        function openCart() {
+            cartIsOpen = true;
+            cartContainer.style.right = "0";
+        }
+
+        // Function to close the cart sidebar
+        function closeCart() {
+            cartIsOpen = false;
+            cartContainer.style.right = "-300px";
+        }
+
+        let cartItems = [];
+
+        function addToCart(productName, price) {
+            const item = { productName, price };
+            cartItems.push(item);
+
+            updateCartUI();
+        }
+
+        function removeItem(index) {
+            cartItems.splice(index, 1);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const cartItemsList = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+            cartItemsList.innerHTML = "";
+
+            let total = 0;
+
+            cartItems.forEach((item, index) => {
+                const listItem = document.createElement("li");
+                const removeButton = document.createElement("span");
+                removeButton.className = "remove-button";
+                removeButton.innerHTML = "Remove";
+                removeButton.onclick = function() {
+                    removeItem(index);
+                };
+
+                listItem.innerText = `${item.productName} - $${item.price.toFixed(2)}`;
+                listItem.appendChild(removeButton);
+                cartItemsList.appendChild(listItem);
+                total += item.price;
+            });
+
+            cartTotal.innerText = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
